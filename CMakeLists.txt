@@ -19,6 +19,7 @@ endif()
 
 include_directories(
 	./src/include/
+	./ext/nanogui/include/
 	.
 )
 set(ALL_LIBS

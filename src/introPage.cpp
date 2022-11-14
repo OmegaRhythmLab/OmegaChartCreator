@@ -1,5 +1,5 @@
 #include "./include/common.h"
-#include "./include/nanogui/nanogui.h"
+#include <nanogui/nanogui.h>
 
 class introPage : public nanogui::Screen {
 public:

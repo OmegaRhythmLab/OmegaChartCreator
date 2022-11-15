@@ -14,8 +14,12 @@
 
 #ifdef WIN32
 	#define OCCEXPORT __declspec(dllexport)
+	#define APPDATA std::string(getenv("LOCALAPPDATA")) + "\\OmegaChartCreator\\"
+	#define TEMP std::string(getenv("TEMP")) + "\\OmegaChartCreator\\"
 #else
 	#define OCCEXPORT extern
+	#define APPDATA std::string(getenv("HOME")) + "/Library/Application Support/OmegaChartCreator/"
+	#define TEMP std::string(getenv("TMPDIR")) + "/OmegaChartCreator/"
 #endif
 
 #endif // OCC_COMMON_H

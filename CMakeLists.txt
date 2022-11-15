@@ -30,6 +30,8 @@ include_directories(
 	./ext/nanogui/include/
 	./ext/nanogui/ext/eigen/
 	./ext/nanogui/ext/nanovg/src/
+	./ext/json/single_include/
+	./ext/hash/
 	.
 )
 set(ALL_LIBS

@@ -1,3 +1,9 @@
 [submodule "ext/nanogui"]
 	path = ext/nanogui
 	url = https://github.com/wjakob/nanogui.git
+[submodule "ext/hash"]
+	path = ext/hash
+	url = https://github.com/stbrumme/hash-library.git
+[submodule "ext/json"]
+	path = ext/json
+	url = https://github.com/nlohmann/json.git

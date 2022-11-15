@@ -15,15 +15,7 @@
 #include <fstream>
 #include <vector>
 
-#ifdef WIN32
-#include <windows.h>
 
-#define APPDATA std::string(getenv("APPDATA")) + "\\OmegaChartCreator\\"
-
-#else //MacOS
-
-#define APPDATA std::string(getenv("HOME")) + "/Library/Application Support/OmegaChartCreator/"
-#endif
 
 
 using std::string;

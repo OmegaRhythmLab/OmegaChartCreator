@@ -21,7 +21,7 @@ int main(int /* argc */, char ** /* argv */) {
     nanogui::init();
 
     /* scoped variables */ {
-        bool use_gl_4_1 = false;// Set to true to create an OpenGL 4.1 context.
+        bool use_gl_4_1 = true;// Set to true to create an OpenGL 4.1 context.
         Screen *screen = nullptr;
 
         if (use_gl_4_1) {

@@ -30,6 +30,7 @@ include_directories(
 	./ext/nanogui/include/
 	./ext/nanogui/ext/eigen/
 	./ext/nanogui/ext/nanovg/src/
+	./ext/nanogui/ext/glfw/include/
 	./ext/json/single_include/
 	./ext/hash/
 	.

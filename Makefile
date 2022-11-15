@@ -201,97 +201,6 @@ nanogui/fast:
 .PHONY : nanogui/fast
 
 #=============================================================================
-# Target rules for targets named example1
-
-# Build rule for target.
-example1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example1
-.PHONY : example1
-
-# fast build rule for target.
-example1/fast:
-	$(MAKE) $(MAKESILENT) -f ext/nanogui/CMakeFiles/example1.dir/build.make ext/nanogui/CMakeFiles/example1.dir/build
-.PHONY : example1/fast
-
-#=============================================================================
-# Target rules for targets named example2
-
-# Build rule for target.
-example2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example2
-.PHONY : example2
-
-# fast build rule for target.
-example2/fast:
-	$(MAKE) $(MAKESILENT) -f ext/nanogui/CMakeFiles/example2.dir/build.make ext/nanogui/CMakeFiles/example2.dir/build
-.PHONY : example2/fast
-
-#=============================================================================
-# Target rules for targets named example3
-
-# Build rule for target.
-example3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example3
-.PHONY : example3
-
-# fast build rule for target.
-example3/fast:
-	$(MAKE) $(MAKESILENT) -f ext/nanogui/CMakeFiles/example3.dir/build.make ext/nanogui/CMakeFiles/example3.dir/build
-.PHONY : example3/fast
-
-#=============================================================================
-# Target rules for targets named example4
-
-# Build rule for target.
-example4: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example4
-.PHONY : example4
-
-# fast build rule for target.
-example4/fast:
-	$(MAKE) $(MAKESILENT) -f ext/nanogui/CMakeFiles/example4.dir/build.make ext/nanogui/CMakeFiles/example4.dir/build
-.PHONY : example4/fast
-
-#=============================================================================
-# Target rules for targets named example_icons
-
-# Build rule for target.
-example_icons: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_icons
-.PHONY : example_icons
-
-# fast build rule for target.
-example_icons/fast:
-	$(MAKE) $(MAKESILENT) -f ext/nanogui/CMakeFiles/example_icons.dir/build.make ext/nanogui/CMakeFiles/example_icons.dir/build
-.PHONY : example_icons/fast
-
-#=============================================================================
-# Target rules for targets named nanogui-python-obj
-
-# Build rule for target.
-nanogui-python-obj: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nanogui-python-obj
-.PHONY : nanogui-python-obj
-
-# fast build rule for target.
-nanogui-python-obj/fast:
-	$(MAKE) $(MAKESILENT) -f ext/nanogui/CMakeFiles/nanogui-python-obj.dir/build.make ext/nanogui/CMakeFiles/nanogui-python-obj.dir/build
-.PHONY : nanogui-python-obj/fast
-
-#=============================================================================
-# Target rules for targets named nanogui-python
-
-# Build rule for target.
-nanogui-python: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nanogui-python
-.PHONY : nanogui-python
-
-# fast build rule for target.
-nanogui-python/fast:
-	$(MAKE) $(MAKESILENT) -f ext/nanogui/CMakeFiles/nanogui-python.dir/build.make ext/nanogui/CMakeFiles/nanogui-python.dir/build
-.PHONY : nanogui-python/fast
-
-#=============================================================================
 # Target rules for targets named glfw_objects
 
 # Build rule for target.
@@ -354,17 +263,10 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... OmegaChartCreator"
-	@echo "... example1"
-	@echo "... example2"
-	@echo "... example3"
-	@echo "... example4"
-	@echo "... example_icons"
 	@echo "... glfw"
 	@echo "... glfw_objects"
 	@echo "... nanogui"
 	@echo "... nanogui-obj"
-	@echo "... nanogui-python"
-	@echo "... nanogui-python-obj"
 	@echo "... src/introPage.o"
 	@echo "... src/introPage.i"
 	@echo "... src/introPage.s"

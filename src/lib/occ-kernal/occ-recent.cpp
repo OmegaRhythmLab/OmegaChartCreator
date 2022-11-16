@@ -5,15 +5,15 @@ namespace fs = std::filesystem;
 
 Recent::Recent(){
 	this->configPath = APPDATA;
-	this->getConfig();
-	this->readConfig();
+	this->getRecent();
+	this->readRecent();
 }
 
 Recent::~Recent(){
-	this->writeConfig();
+	this->writeRecent();
 }
 
-int Recent::getConfig(){
+int Recent::getRecent(){
 	if(!fs::exists(this->configPath)){
 		if(!fs::create_directories(this->configPath)){
 			return -1;
@@ -23,7 +23,7 @@ int Recent::getConfig(){
 	return 0;
 }
 
-int Recent::writeConfig(){
+int Recent::writeRecent(){
 	if(this->config.is_open()){
 		this->config.close();
 	}
@@ -38,7 +38,7 @@ int Recent::writeConfig(){
 	this->config.close();
 }
 
-int Recent::readConfig(){
+int Recent::readRecent(){
 	if(!this->config.is_open()){
 		return -1;
 	}

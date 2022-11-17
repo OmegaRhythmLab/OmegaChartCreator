@@ -1,6 +1,9 @@
 # OmegaChartCreator
 Omega 制谱工具箱
 
+## 链接:
+[change log](./changeLog.md)
+
 #License
 我的最爱 [WTFPL](http://www.wtfpl.net/)
 ```

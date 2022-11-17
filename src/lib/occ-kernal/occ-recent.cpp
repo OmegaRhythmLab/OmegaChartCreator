@@ -1,5 +1,7 @@
 #include "occ-recent.h"
 
+#include <iostream>
+
 using namespace occ;
 namespace fs = std::filesystem;
 
@@ -29,6 +31,7 @@ int Recent::writeRecent(){
 	}
 	this->config.open(this->configPath + "recent", std::ios::out | std::ios::trunc);
 	if(!this->config.is_open()){
+		std::cout << "Failed to open config file" << std::endl;
 		return -1;
 	}
 	for(auto &i : this->recentLists){
@@ -59,3 +62,27 @@ int Recent::createNewProject(string name, string path){
 	return 0;
 }
 
+const bool Recent::checkValid(string path){
+	if(!fs::exists(path+OMGCINFO)){
+		return false;
+	}
+	return true;
+}
+
+int Recent::removeRecent(string path){
+	for(auto i = this->recentLists.begin(); i != this->recentLists.end(); i++){
+		if(i->path == path){
+			this->recentLists.erase(i);
+			return 0;
+		}
+	}
+	return -1;
+}
+#define DEBUG
+#ifdef DEBUG
+int main(){
+	Recent r;
+	r.createNewProject("test", "test");
+	r.writeRecent();
+}
+#endif

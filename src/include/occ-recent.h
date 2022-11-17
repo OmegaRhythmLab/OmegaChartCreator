@@ -64,7 +64,7 @@ namespace occ{
 			 *
 			 * @return true if it is, false if not
 			 */
-			const bool checkValid();
+			const bool checkValid(string path);
 
 			/**
 			 * @brief Add a new project to the recent list
@@ -76,14 +76,14 @@ namespace occ{
 			 */
 			int addRecent(string name, string path);
 			/**
-			 * @brief Get the recent list
+			 * @brief remove one form the recent list
 			 *
 			 * @param name The name of the project
 			 * @param path The path of the project
 			 *
 			 * @return 0 if success, -1 if failed
 			 */
-			int removeRecent(string name, string path);
+			int removeRecent(string path);
 			/**
 			 * @brief Remove recent config file
 			 *
@@ -106,8 +106,6 @@ namespace occ{
 
 		private:
 			std::vector<recentList> recentLists;
-			int recentCount;
-			int recentMax;
 			string configPath;
 			std::fstream config;
 	};

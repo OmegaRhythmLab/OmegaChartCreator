@@ -3,6 +3,9 @@ Omega 制谱工具箱
 
 ## 链接:
 [change log](./changeLog.md)
+制谱器文件格式看[这里](./doc/formants.md)
+工程文件转铺面文件的编译器看[这里](./doc/compilers.md)
+显示工程文件的图像服务器看[这里](./doc/graphicServer.md)
 
 #License
 我的最爱 [WTFPL](http://www.wtfpl.net/)

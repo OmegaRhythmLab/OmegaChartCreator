@@ -1,7 +1,7 @@
 # 文件格式文档
 
 ## 编译器配置文件
-### _COMPILER-NAME_.toml
+### _COMPILER-EXECUTABLE-NAME_.toml
 编译器配置文件
 ```toml
 ...

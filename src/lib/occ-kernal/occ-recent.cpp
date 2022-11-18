@@ -35,10 +35,11 @@ int Recent::writeRecent(){
 		return -1;
 	}
 	for(auto &i : this->recentLists){
-		this->config << i.name << std::endl;
+		this->config << i.name << " ";
 		this->config << i.path << std::endl;
 	}
 	this->config.close();
+	return 0;
 }
 
 int Recent::readRecent(){
@@ -55,10 +56,10 @@ int Recent::readRecent(){
 }
 
 int Recent::createNewProject(string name, string path){
-	if(!fs::exists(path)){
+	if(fs::exists(path)){
 		return -1;
 	}
-	this->recentLists.push_back(recentList(name, path));
+	this->recentLists.push_back(recentList(name, fs::absolute(path)));
 	return 0;
 }
 
@@ -67,6 +68,10 @@ const bool Recent::checkValid(string path){
 		return false;
 	}
 	return true;
+}
+
+const std::vector<recentList> Recent::getRecentList(){
+	return this->recentLists;
 }
 
 int Recent::removeRecent(string path){
@@ -82,7 +87,13 @@ int Recent::removeRecent(string path){
 #ifdef DEBUG
 int main(){
 	Recent r;
-	r.createNewProject("test", "test");
+	int a=r.createNewProject("test", "test");
+	std::cout << a << std::endl;
+	// look at recent Lists
+	std::cout << "Recent Lists:" << std::endl;
+	for(auto &i : r.getRecentList()){
+		std::cout << i.name << " " << i.path << std::endl;
+	}
 	r.writeRecent();
 }
 #endif

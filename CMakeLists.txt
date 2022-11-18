@@ -33,6 +33,7 @@ include_directories(
 	./ext/nanogui/ext/glfw/include/
 	./ext/json/single_include/
 	./ext/hash/
+	./ext/toml/include/
 	.
 )
 set(ALL_LIBS

@@ -23,7 +23,7 @@ using std::string;
 namespace occ{
 
 
-	OCCEXPORT struct recentList{
+	struct recentList{
 		recentList(string name, string path){
 			this->name = name;
 			this->path = path;
@@ -33,7 +33,7 @@ namespace occ{
 		bool valid=false;
 	};
 
-	OCCEXPORT class Recent{
+	class OCCEXPORT Recent{
 		public: 
 			Recent();
 			~Recent();
@@ -101,7 +101,7 @@ namespace occ{
 			 */
 			int createNewProject(string name, string path);
 
-			const recentList *getRecentList();
+			const std::vector<recentList> getRecentList();
 			const int getRecentListSize();
 
 		private:

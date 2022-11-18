@@ -1,28 +1,59 @@
 # 文件格式文档
 
 ## 编译器配置文件
-### _COMPILER-NAME_.json
-应是一个字典, 格式如下
-```json
-{
-	"args":{
-		"arg-name-1" : "value1",
-		"arg-name-2" : "value2",
-		// 变量的声明如下
-		// 变量应是 PROJECT-NAME.omgproj 文件中的索引
-		"arg-name-3" : "${var1}",
-	},
-}
+### _COMPILER-NAME_.toml
+编译器配置文件
+```toml
+...
+# 在general下写什么都可以
+[general]
+icon = "./icon.png"
+...
+
+# 生成器模版
+[generator]
+
+# 空白模版
+[generator.blank]
+desc = "这是个空白模板" #描述
+requirments = []
+args = []
+inputs = []
+
+# 模版项目
+[generator.demo]
+desc = "这是个示例模板"
+requirments = []
+args = []
+inputs = []
+
+# 编译器配置
+[compiler]
+args = []
+inputs = []
+
+...
 ```
 
 ## 项目配置文件
-### _PROJECT-NAME_.omgproj
-TOML 文件格式 还没想好
+### _PROJECT-NAME_.omgproj 
+此文件应以编译器生成
+必须有一下片段
+```toml
+...
+
+project_name = "_PROJECT-NAME_"
+
+[project]
+type = "_PROJECT_TYPE_"
+
+...
+```
 
 ## 最近项目文件
 ### recent
-每行都是一个文件, 没什么好说的, 一行两个字符串, 用空格分开
-前半是项目名, 后半是项目路径
+每行都是一个文件, 没什么好说的, 一行三个字符串, 用空格分开
+前半是项目名, 中间是项目类型, 后半是项目路径
 
 ## 编辑器许可证文件
 ### omglicense @beta
